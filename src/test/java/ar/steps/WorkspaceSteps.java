@@ -6,7 +6,7 @@ import services.WorkspaceService;
 
 public class WorkspaceSteps {
     @Given("With the workspace named (.*) selected")
-    public void iSelectTheWorkspaceNamed(String name) {
+    public void SelectTheWorkspaceNamed(String name) {
         String workspaceId = WorkspaceService.getWorkspaceIdByName("workspaceJson", name);
         BaseService.setWorkspaceId(workspaceId);
     }

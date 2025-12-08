@@ -1,8 +1,11 @@
 {
   "url": "{{baseUrl}}",
-  "endpoint": "/v1/workspaces/{{workspaceId}}",
+  "endpoint": "/v1/workspaces/{{workspaceId}}/clients/{{clientId}}",
   "headers": {
     "x-api-key": "{{apiKey}}",
     "Content-Type": "application/json"
+  },
+  "body": {
+    "name": "{{name}}"
   }
 }

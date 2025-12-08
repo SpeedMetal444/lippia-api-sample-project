@@ -1,6 +1,6 @@
 package services;
 
-import api.model.project.Root;
+import api.model.client.Root;
 import com.crowdar.api.rest.MethodsService;
 import com.crowdar.api.rest.Response;
 import com.crowdar.core.PropertyManager;
@@ -8,7 +8,7 @@ import com.crowdar.core.PropertyManager;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ProjectService extends MethodsService {
+public class ClientService extends MethodsService {
 
     public static Response get(String jsonName) {
         return get(jsonName, Root[].class, setParams());
