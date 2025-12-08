@@ -22,19 +22,4 @@ public class BaseService {
     public static Response getLastResponse() {
         return LAST_RESPONSE.get();
     }
-
-    public static void printLastResponse() {
-        Response response = LAST_RESPONSE.get();
-        if (response == null) {
-            System.out.println("No response found.");
-            return;
-        }
-
-        System.out.println("=== RESPONSE BODY ===");
-        String pretty = new GsonBuilder().setPrettyPrinting().create()
-                .toJson(response.getResponse());
-        System.out.println(pretty);
-
-        System.out.println("=====================");
-    }
 }
