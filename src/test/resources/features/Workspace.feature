@@ -9,3 +9,4 @@ Feature: Workspace on Clockify
   Scenario: Get all my workspaces
     When I perform a 'GET' to 'WORKSPACE' endpoint with the 'workspaceJson' and ''
     Then status code 200 is obtained
+    And Print response
