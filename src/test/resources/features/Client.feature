@@ -8,12 +8,24 @@ Feature: Clients from workspaces on Clockify
 
   @GetAllMyClients
   Scenario: Getting the clients from different workspaces
+    When I perform a 'GET' to 'CLIENT' endpoint with the 'clientsJson' and ''
+    Then status code 200 is obtained
+    And Print response
 
   @GetAClient
   Scenario: Getting a client by its id
+    When I perform a 'GET' to 'CLIENT' endpoint with the 'clientJson' and 'clientId:6928f5ed96220f42b645b890'
+    Then status code 200 is obtained
+    And Print response
 
   @CreateAClient
   Scenario: Creating a client on the selected workspace
+    When I perform a 'POST' to 'CLIENT' endpoint with the 'clientsJson' and 'name:TestLippia2'
+    Then status code 201 is obtained
+    And Print response
 
   @DeleteAClient
   Scenario: Deleting a client from the selected workspace
+    When I perform a 'DELETE' to 'CLIENT' endpoint with the 'clientJson' and 'clientId:6928f5ed96220f42b645b890'
+    Then status code 200 is obtained
+    And Print response
