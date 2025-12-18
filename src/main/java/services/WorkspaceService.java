@@ -35,10 +35,5 @@ public class WorkspaceService extends MethodsService {
         }
         throw new RuntimeException("Workspace not found: " + workspaceName);
     }
-
-    @Override
-    public void validateFields(Object expected, Object actual, Map<String, String> parameters) throws Exception {
-        validateFields(expected, actual);
-    }
 }
 

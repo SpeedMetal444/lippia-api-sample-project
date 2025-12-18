@@ -45,15 +45,12 @@ public class TimeEntryService extends MethodsService {
 
     private static Map<String, String> mergeParams(Map<String, String> dynamicValues) {
         Map<String, String> finalParams = setParams();
-
         if (BaseService.getProjectId() != null) {
             finalParams.put("projectId", BaseService.getProjectId());
         }
-
         if (dynamicValues != null) {
             finalParams.putAll(dynamicValues);
         }
-
         return finalParams;
     }
 }
