@@ -1,6 +1,8 @@
 @Clients
 Feature: Clients from workspaces on Clockify
-  As a Clockify user I want to review my workspaces so that I can interact with my clients
+  As a Clockify user
+  I want to review my workspaces
+  So that I can interact with my clients
 
   Background:
     Given With an account and a Mzc2NTU1NTAtYzhmNi00NWVmLWI5Y2MtMDgyYmNlOGVlYThm api key on Clockify

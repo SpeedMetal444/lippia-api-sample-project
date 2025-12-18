@@ -1,6 +1,5 @@
 package api.model.workspace; 
 import java.util.ArrayList;
-import java.util.List;
 public class Root{
     public String id;
     public String name;

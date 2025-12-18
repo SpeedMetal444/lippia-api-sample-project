@@ -1,9 +1,6 @@
 package api.config;
 
-import services.ClientService;
-import services.ProjectService;
-import services.UserService;
-import services.WorkspaceService;
+import services.*;
 
 public enum EntityConfiguration {
 
@@ -32,6 +29,20 @@ public enum EntityConfiguration {
         @Override
         public Class<?> getEntityService() {
             return ClientService.class;
+        }
+    },
+
+    TIME_ENTRY {
+        @Override
+        public Class<?> getEntityService() {
+            return TimeEntryService.class;
+        }
+    },
+
+    CLOCKIFY_USER {
+        @Override
+        public Class<?> getEntityService() {
+            return ClockifyUserService.class;
         }
     };
     public abstract Class<?> getEntityService();

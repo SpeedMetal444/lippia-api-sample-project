@@ -1,6 +1,8 @@
 @Projects
 Feature: Projects on Clockify Workspaces
-  As a Clockify user I want to review my workspaces so that I can interact with my projects
+  As a Clockify user
+  I want to review my workspaces
+  So that I can interact with my projects
 
   Background:
     Given With an account and a Mzc2NTU1NTAtYzhmNi00NWVmLWI5Y2MtMDgyYmNlOGVlYThm api key on Clockify
@@ -27,7 +29,7 @@ Feature: Projects on Clockify Workspaces
   @DeleteProject
   Scenario: Deleting a project from the selected workspace
     When I perform a 'PUT' to 'PROJECT' endpoint with the 'projectJson' and 'projectId:6937484621a5ed759263ce88,archived:true'
-    Then status code 200 is obtained
+    And status code 200 is obtained
     And I perform a 'DELETE' to 'PROJECT' endpoint with the 'projectJson' and 'projectId:6937484621a5ed759263ce88'
     Then status code 200 is obtained
     And Print response

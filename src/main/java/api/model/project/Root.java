@@ -2,7 +2,6 @@ package api.model.project;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
-import java.util.List;
 public class Root{
     public String id;
     public String name;

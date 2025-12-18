@@ -1,6 +1,5 @@
 package api.model.workspace; 
 import java.util.ArrayList;
-import java.util.List;
 public class WorkspaceSettings{
     public boolean timeRoundingInReports;
     public boolean onlyAdminsSeeBillableRates;

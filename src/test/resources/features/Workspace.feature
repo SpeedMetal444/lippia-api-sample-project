@@ -1,6 +1,8 @@
 @Workspaces
 Feature: Workspace on Clockify
-  As a Clockify user I want to perform a request to get a proper response from my Workspaces
+  As a Clockify user
+  I want to perform a request
+  So that I can get a proper response from my Workspaces
 
   Background:
     Given With an account and a Mzc2NTU1NTAtYzhmNi00NWVmLWI5Y2MtMDgyYmNlOGVlYThm api key on Clockify

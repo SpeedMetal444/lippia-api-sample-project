@@ -1,6 +1,6 @@
 package services;
 
-import api.model.project.Root;
+import api.model.timeentry.Root;
 import com.crowdar.api.rest.MethodsService;
 import com.crowdar.api.rest.Response;
 import com.crowdar.core.PropertyManager;
@@ -8,7 +8,7 @@ import com.crowdar.core.PropertyManager;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ProjectService extends MethodsService {
+public class TimeEntryService extends MethodsService {
 
     public static Response get(String jsonName) {
         return get(jsonName, Root[].class, setParams());
@@ -39,6 +39,7 @@ public class ProjectService extends MethodsService {
         params.put("baseUrl", PropertyManager.getProperty("base.api.url"));
         params.put("apiKey", BaseService.getApiKey());
         params.put("workspaceId", BaseService.getWorkspaceId());
+        params.put("userId", BaseService.getUserId());
         return params;
     }
 
@@ -54,20 +55,5 @@ public class ProjectService extends MethodsService {
         }
 
         return finalParams;
-    }
-
-    public static Root[] getAllProjects(String jsonName) {
-        Response r = get(jsonName);
-        return (Root[]) r.getResponse();
-    }
-
-    public static String getProjectIdByName(String jsonName, String projectName) {
-        Root[] list = getAllProjects(jsonName);
-        for (Root p : list) {
-            if (p.name.equalsIgnoreCase(projectName)) {
-                return p.id;
-            }
-        }
-        throw new RuntimeException("Project not found: " + projectName);
     }
 }

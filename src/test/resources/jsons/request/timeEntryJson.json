@@ -1,0 +1,12 @@
+{
+  "url": "{{baseUrl}}",
+  "endpoint": "/v1/workspaces/{{workspaceId}}/time-entries/{{timeEntryId}}",
+  "headers": {
+    "x-api-key": "{{apiKey}}",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "description": "{{description}}",
+    "start": "2025-12-17T21:00:00Z"
+  }
+}

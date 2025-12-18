@@ -28,13 +28,11 @@ public class WorkspaceService extends MethodsService {
 
     public static String getWorkspaceIdByName(String jsonName, String workspaceName) {
         Root[] list = getAllWorkspaces(jsonName);
-
         for (Root w : list) {
             if (w.name.equalsIgnoreCase(workspaceName)) {
                 return w.id;
             }
         }
-
         throw new RuntimeException("Workspace not found: " + workspaceName);
     }
 
