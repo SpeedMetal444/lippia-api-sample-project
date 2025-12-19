@@ -24,12 +24,12 @@ Feature: Time entries on Clockify
 
   @EditATimeEntry @Regression @TPFinal
   Scenario: Edit an specific time entry
-    When I perform a 'PUT' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:69449c011ff4ed410a5e392d,description:Testing PUT request'
+    When I perform a 'PUT' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:6944a4efe1003f759f7acf29,description:Testing PUT request'
     Then status code 200 is obtained
     And Print response
 
   @DeleteATimeEntry @Regression @TPFinal
   Scenario: Delete an specific time entry
-    When I perform a 'DELETE' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:69449c011ff4ed410a5e392d'
+    When I perform a 'DELETE' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:6944a4efe1003f759f7acf29'
     Then status code 204 is obtained
     And Print response
