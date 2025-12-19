@@ -2,7 +2,6 @@ package ar.steps;
 
 import api.config.EntityConfiguration;
 import com.crowdar.core.PageSteps;
-import cucumber.api.PendingException;
 import io.cucumber.java.en.*;
 import com.google.api.client.repackaged.com.google.common.base.Splitter;
 import cucumber.api.java.en.When;

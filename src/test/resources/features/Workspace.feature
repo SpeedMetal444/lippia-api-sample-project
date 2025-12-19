@@ -5,9 +5,9 @@ Feature: Workspace on Clockify
   So that I can get a proper response from my Workspaces
 
   Background:
-    Given With an account and a Mzc2NTU1NTAtYzhmNi00NWVmLWI5Y2MtMDgyYmNlOGVlYThm api key on Clockify
+    Given With an account and a 'Mzc2NTU1NTAtYzhmNi00NWVmLWI5Y2MtMDgyYmNlOGVlYThm' api key on Clockify
 
-  @GetAllMyWorkspaces
+  @GetAllMyWorkspaces @Smoke @Regression
   Scenario: Get all my workspaces
     When I perform a 'GET' to 'WORKSPACE' endpoint with the 'workspacesJson' and ''
     Then status code 200 is obtained

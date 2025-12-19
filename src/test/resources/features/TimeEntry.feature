@@ -9,27 +9,27 @@ Feature: Time entries on Clockify
     And With the authenticated Clockify user 'Abel Godoy'
     And With the workspace named 'HardBrick' selected
 
-  @GetAClientTimeEntries
+  @GetAClientTimeEntries @Smoke @Regression @TPFinal
   Scenario: Get the time entries for an specific user
     When I perform a 'GET' to 'TIME_ENTRY' endpoint with the 'userTimeEntriesJson' and ''
     Then status code 200 is obtained
     And Print response
 
-  @AddATimeEntryToAProject
+  @AddATimeEntryToAProject @Regression @TPFinal
   Scenario: Add a time entry to an specific project
     Given With the project named 'TPFinal' selected
     When I perform a 'POST' to 'TIME_ENTRY' endpoint with the 'timeEntriesJson' and 'description:Testing TimeEntry12'
     Then status code 201 is obtained
     And Print response
 
-  @EditATimeEntry
+  @EditATimeEntry @Regression @TPFinal
   Scenario: Edit an specific time entry
-    When I perform a 'PUT' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:694356fae1003f759f644d56,description:Testing PUT request'
+    When I perform a 'PUT' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:6942ea444e833433d98b11a3,description:Testing PUT request'
     Then status code 200 is obtained
     And Print response
 
-  @DeleteATimeEntry
+  @DeleteATimeEntry @Regression @TPFinal
   Scenario: Delete an specific time entry
-    When I perform a 'DELETE' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:694356fae1003f759f644d56'
+    When I perform a 'DELETE' to 'TIME_ENTRY' endpoint with the 'timeEntryJson' and 'timeEntryId:6942ea444e833433d98b11a3'
     Then status code 204 is obtained
     And Print response
